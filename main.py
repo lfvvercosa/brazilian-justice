@@ -172,6 +172,7 @@ if __name__ == "__main__":
     noise_thres = 0.3
     lawsuit_type = [11881,1032]
     clusters = [37,30,40]
+    saving_path = 'images/'
 
     all_acts = \
         df_mov_copy.drop_duplicates('movimentoCodigoNacional')\
@@ -180,7 +181,10 @@ if __name__ == "__main__":
     key_acts_code = [int(f[f.find('_')+1:]) for f in key_activities]
     remove_acts = [f for f in all_acts if f not in key_acts_code]
 
-    print('show special appeal DFGs \n')
+
+
+
+    print('save image special appeal DFGs \n')
 
     my_orchestrator.get_clusters_dfgs(
             df_mov_copy,
@@ -188,10 +192,11 @@ if __name__ == "__main__":
             clusters,
             lawsuit_type,
             noise_thres,
-            remove_acts
+            remove_acts,
+            saving_path
     )
 
-    print('show special appeal clusters DFG with no processing')
+    print('save image appeal clusters DFG with no processing')
 
     my_orchestrator.get_clusters_dfgs_no_processing(
             df_mov,
@@ -199,6 +204,7 @@ if __name__ == "__main__":
             clusters,
             lawsuit_type,
             noise_thres=0,
-            act_code_rem=None
+            act_code_rem=None,
+            saving_path=saving_path
     )
 

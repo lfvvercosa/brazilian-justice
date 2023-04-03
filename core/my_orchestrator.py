@@ -342,7 +342,8 @@ def get_clusters_dfgs_no_processing(
                       clusters,
                       lawsuit_type,
                       noise_thres,
-                      act_code_rem
+                      act_code_rem,
+                      saving_path
                      ):
     
     df_vis = df_mov.copy(deep=True)
@@ -370,9 +371,13 @@ def get_clusters_dfgs_no_processing(
                                         ea_freq,
                                         noise_thres)
 
-        pm4py.view_dfg(dfg_freq, sa_freq, ea_freq)
-        plt.show(block=True)
-        plt.close()
+        if saving_path:
+            pm4py.save_vis_dfg(dfg_freq, sa_freq, ea_freq, saving_path + \
+                'no_processing.png')
+        else:
+            pm4py.view_dfg(dfg_freq, sa_freq, ea_freq)
+            plt.show(block=True)
+            plt.close()
 
 
 def get_clusters_dfgs(df_mov, 
@@ -380,7 +385,8 @@ def get_clusters_dfgs(df_mov,
                       clusters,
                       lawsuit_type,
                       noise_thres,
-                      act_code_rem
+                      act_code_rem,
+                      saving_path
                      ):
     
     df_vis = df_mov.copy(deep=True)
@@ -409,6 +415,10 @@ def get_clusters_dfgs(df_mov,
                                         ea_freq,
                                         noise_thres)
 
-        pm4py.view_dfg(dfg_freq, sa_freq, ea_freq)
-        plt.show(block=True)
-        plt.close()
+        if saving_path:
+            pm4py.save_vis_dfg(dfg_freq, sa_freq, ea_freq, saving_path + \
+                str(c) + '.png')
+        else:
+            pm4py.view_dfg(dfg_freq, sa_freq, ea_freq)
+            plt.show(block=True)
+            plt.close()

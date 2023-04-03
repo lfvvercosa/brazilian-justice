@@ -1,6 +1,3 @@
-# brazilian_justice
-
-
 # Steps for running the code
 
 ## 1) Download the Brazilian Justice dataset

@@ -372,6 +372,11 @@ def get_clusters_dfgs_no_processing(
                                         noise_thres)
 
         if saving_path:
+            isExist = os.path.exists(saving_path)
+            
+            if not isExist:
+                os.makedirs(saving_path)
+                
             pm4py.save_vis_dfg(dfg_freq, sa_freq, ea_freq, saving_path + \
                 'no_processing.png')
         else:
@@ -416,6 +421,11 @@ def get_clusters_dfgs(df_mov,
                                         noise_thres)
 
         if saving_path:
+            isExist = os.path.exists(saving_path)
+            
+            if not isExist:
+                os.makedirs(saving_path)
+
             pm4py.save_vis_dfg(dfg_freq, sa_freq, ea_freq, saving_path + \
                 str(c) + '.png')
         else:

@@ -181,9 +181,6 @@ if __name__ == "__main__":
     key_acts_code = [int(f[f.find('_')+1:]) for f in key_activities]
     remove_acts = [f for f in all_acts if f not in key_acts_code]
 
-
-
-
     print('save image special appeal DFGs \n')
 
     my_orchestrator.get_clusters_dfgs(

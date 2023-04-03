@@ -13,9 +13,11 @@ def load_df(my_files):
                 df = temp
             else:
                 df = pd.concat([df, temp])
+
+            print('file found: ' + str(f))
+
         except Exception as e:
-            print('file not found: ' + str(f))
-            print(e)
+            pass
     
     return df
 

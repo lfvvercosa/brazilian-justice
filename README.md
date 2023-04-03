@@ -15,18 +15,16 @@ And the files:
 - 'df_classes.csv'
 - 'df_movimentos.csv'. 
 
-Please, place the folder and files inside 'dataset' project root folder. 
+Please, create a folder called 'dataset' in the root directory and place 'tribunais superiores' folder and the three files inside the 'dataset' folder. 
 
 ## 2) Install python packages contained in 'requirements.txt' file
-	```console
+
 	pip3 install -r requirements.txt
-	```
+
 ## 3) Install 'graphviz' software on machine. Example on Linux Debian:
-	```console
+
 	sudo apt-get install graphviz
-	```
 
 ## 4) Run 'main.py'.
-	```console
+
 	python3 main.py
-	```

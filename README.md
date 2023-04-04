@@ -28,6 +28,7 @@ Please, place the downloaded files inside the 'dataset' folder in the root direc
 	sudo apt-get install graphviz
 	sudo apt-get install xdg-utils
 
-## 5) Run 'main.py'.
+## 5) Run any of the 'main' files:
 
-	python3 main.py
+	python3 main_experiments.py
+	python3 main_create_log.py

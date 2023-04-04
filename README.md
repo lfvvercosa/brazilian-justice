@@ -1,30 +1,33 @@
-# Steps for running the code
+# Steps for running the code:
 
-## 1) Download the Brazilian Justice dataset
+## 1) Clone the git repository using https:
+
+	git clone https://github.com/lfvvercosa/brazilian-justice.git
+
+## 2) Download the Brazilian Justice dataset
 
 The full dataset is available at: 
 
 - https://data.4tu.nl/datasets/fcdc27b9-44fd-476f-9a2d-1774e96e505f/1
 - https://www.kaggle.com/datasets/lfvvercosa/brazilian-justice-processes
 
-However, in order to run this code, it is only necessary to download the folder:
-- 'tribunais_superiores' 
+To run this code, it is sufficient to download the following folder and files:
+- 'tribunais_superiores' (folder)
+- 'df_assuntos.csv' (file)
+- 'df_classes.csv' (file)
+- 'df_movimentos.csv' (file) 
 
-And the files: 
-- 'df_assuntos.csv'
-- 'df_classes.csv'
-- 'df_movimentos.csv'. 
+Please, place the downloaded files inside the 'dataset' folder in the root directory. 
 
-Please, create a folder called 'dataset' in the root directory and place 'tribunais superiores' folder and the three files inside the 'dataset' folder. 
-
-## 2) Install python packages contained in 'requirements.txt' file
+## 3) Install python packages contained in 'requirements.txt' file (consider using a virtual environment)
 
 	pip3 install -r requirements.txt
 
-## 3) Install 'graphviz' software on machine. Example on Linux Debian:
+## 4) Install 'graphviz' and 'xdg-utils' software on machine. They are used by PM4Py to create and show images. Example on Linux Debian:
 
 	sudo apt-get install graphviz
+	sudo apt-get install xdg-utils
 
-## 4) Run 'main.py'.
+## 5) Run 'main.py'.
 
 	python3 main.py

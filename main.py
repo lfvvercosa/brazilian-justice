@@ -181,7 +181,7 @@ if __name__ == "__main__":
     key_acts_code = [int(f[f.find('_')+1:]) for f in key_activities]
     remove_acts = [f for f in all_acts if f not in key_acts_code]
 
-    print('save image special appeal DFGs \n')
+    print('show image special appeal DFGs \n')
 
     my_orchestrator.get_clusters_dfgs(
             df_mov_copy,
@@ -193,7 +193,7 @@ if __name__ == "__main__":
             saving_path=None
     )
 
-    print('save image appeal clusters DFG with no processing')
+    print('show image appeal clusters DFG with no processing')
 
     my_orchestrator.get_clusters_dfgs_no_processing(
             df_mov,

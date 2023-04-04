@@ -129,4 +129,13 @@ dmypy.json
 .pyre/
 
 # User Defined
-dataset/
+dataset/justica_militar/
+dataset/justica_eleitoral/
+dataset/justica_trabalho/
+dataset/justica_estadual/
+dataset/justica_federal/
+dataset/tribunais_superiores/
+dataset/df_assuntos.csv
+dataset/df_classes.csv
+dataset/df_movimentos.csv
+dataset/temp/

@@ -190,7 +190,7 @@ if __name__ == "__main__":
             lawsuit_type,
             noise_thres,
             remove_acts,
-            saving_path
+            saving_path=None
     )
 
     print('save image appeal clusters DFG with no processing')
@@ -202,6 +202,6 @@ if __name__ == "__main__":
             lawsuit_type,
             noise_thres=0,
             act_code_rem=None,
-            saving_path=saving_path
+            saving_path=None
     )
 
